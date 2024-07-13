@@ -176,20 +176,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   updateYear();
 });
 
-function setupSmoothScroll() {
-  const scrollArrow = document.querySelector(".fa-chevron-down").parentElement;
-  scrollArrow.addEventListener("click", function (e) {
-    e.preventDefault();
-    const worksSection = document.getElementById("works");
-    worksSection.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
 function handleNavScroll() {
   const nav = document.getElementById("mainNav");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 750) {
       nav.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
       nav.style.boxShadow = "0 2px 4px rgba(0,0,0,.1)";
     } else {
@@ -199,6 +190,62 @@ function handleNavScroll() {
   });
 }
 
+function setupSmoothScroll() {
+  const scrollArrow = document.querySelector(".fa-chevron-down").parentElement;
+  const backToTopButton = document.getElementById("backToTop");
+
+  scrollArrow.addEventListener("click", function (e) {
+    e.preventDefault();
+    const worksSection = document.getElementById("works");
+    if (worksSection) {
+      const navHeight = document.querySelector("nav").offsetHeight;
+      const targetPosition =
+        worksSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        navHeight;
+      smoothScrollTo(targetPosition, 1000);
+    } else {
+      console.error("Works section not found");
+    }
+  });
+
+  backToTopButton.addEventListener("click", function () {
+    smoothScrollTo(0, 1000);
+  });
+
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.remove("opacity-0");
+      backToTopButton.classList.add("opacity-100");
+    } else {
+      backToTopButton.classList.remove("opacity-100");
+      backToTopButton.classList.add("opacity-0");
+    }
+  });
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
 document.addEventListener("DOMContentLoaded", function () {
   // 其他初始化代码...
   handleNavScroll();

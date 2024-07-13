@@ -30,6 +30,14 @@ nav {
   overflow: hidden;
 }
 
+.hero-title-container {
+  height: 7rem; /* 根据需要调整 */
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-title {
   font-family: "Orbitron", sans-serif;
   font-size: 6rem;
@@ -78,11 +86,6 @@ nav {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-}
-
-.hero-title-container {
-  height: 7rem; /* 根据需要调整 */
-  margin-bottom: 3rem; /* 为了保持原有的间距 */
 }
 
 @keyframes glow {
