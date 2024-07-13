@@ -592,6 +592,22 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -605,16 +621,20 @@ video {
   margin-right: auto;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .mr-2 {
@@ -623,10 +643,6 @@ video {
 
 .mr-4 {
   margin-right: 1rem;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .flex {
@@ -641,16 +657,8 @@ video {
   height: 5rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-8 {
   height: 2rem;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-8 {
@@ -665,18 +673,29 @@ video {
   width: 100%;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes pulse {
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
   50% {
-    opacity: .5;
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 .cursor-pointer {
@@ -693,6 +712,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-t {
@@ -714,6 +737,15 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -728,6 +760,11 @@ video {
   --tw-gradient-to: #9333ea var(--tw-gradient-to-position);
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -736,6 +773,11 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-8 {
@@ -760,14 +802,9 @@ video {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-xl {
@@ -779,20 +816,9 @@ video {
   font-weight: 700;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.tracking-wide {
-  letter-spacing: 0.025em;
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {
@@ -810,9 +836,22 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-purple-400 {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-all {
@@ -838,16 +877,6 @@ body {
   /* 移除之前添加的顶部内边距 */
 }
 
-.hero {
-  min-height: calc(100vh - 80px);
-  /* 视口高度减去导航栏高度 */
-  margin-top: 80px;
-  /* 与导航栏高度相同 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 nav {
   height: 80px;
   /* 增加导航栏高度 */
@@ -858,56 +887,175 @@ nav {
   /* 增加容器最大宽度 */
 }
 
+/* Hero 区域样式 */
+
 .hero {
-  min-height: 70vh;
-  /* 增加高度 */
-  padding: 6rem 0;
-  /* 增加内边距 */
-  padding-top: calc(6rem + 80px);
-  /* 考虑导航栏高度 */
-  margin-top: 0;
+  min-height: 80vh;
+  padding: 8rem 0;
+  padding-top: calc(8rem + 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.hero h1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 4rem;
-  /* 增大字体 */
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.5rem;
-  /* 增大字体 */
-  letter-spacing: 1px;
-  max-width: 800px;
-  margin: 0 auto;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.hero p:first-of-type {
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+/* .hero-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-top: -3rem;
+} */
+
+.hero-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-text-1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  font-weight: light;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 0.5s;
+}
+
+.hero-text-2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 1s;
+}
+
+.hero-text-3 {
+  font-size: 3rem;
+  font-weight: semibold;
+  font-style: italic;
+  display: inline-block;
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1.5s;
 }
 
-.hero p:last-of-type {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.hero-text-3:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-#heroText {
-  min-height: 2em;
-  /* 保持一致的高度 */
+.hero-title-container {
+  height: 7rem;
+  /* 根据需要调整 */
+  margin-bottom: 3rem;
+  /* 为了保持原有的间距 */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* 其他动画和样式保持不变 */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 /* 自定义样式 */
@@ -980,15 +1128,14 @@ nav {
   animation: float 3s ease-in-out infinite;
 }
 
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {

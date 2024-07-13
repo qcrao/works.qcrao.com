@@ -10,14 +10,6 @@ body {
   padding-top: 0; /* 移除之前添加的顶部内边距 */
 }
 
-.hero {
-  min-height: calc(100vh - 80px); /* 视口高度减去导航栏高度 */
-  margin-top: 80px; /* 与导航栏高度相同 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 nav {
   height: 80px; /* 增加导航栏高度 */
 }
@@ -26,50 +18,152 @@ nav {
   max-width: 1280px; /* 增加容器最大宽度 */
 }
 
+/* Hero 区域样式 */
 .hero {
-  min-height: 70vh; /* 增加高度 */
-  padding: 6rem 0; /* 增加内边距 */
-  padding-top: calc(6rem + 80px); /* 考虑导航栏高度 */
-  margin-top: 0;
+  min-height: 80vh;
+  padding: 8rem 0;
+  padding-top: calc(8rem + 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.hero h1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 4rem; /* 增大字体 */
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.5rem; /* 增大字体 */
-  letter-spacing: 1px;
-  max-width: 800px;
-  margin: 0 auto;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.hero p:first-of-type {
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.hero-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-top: -3rem;
+}
+
+.hero-text-1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  font-weight: light;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 0.5s;
+}
+
+.hero-text-2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 1s;
+}
+
+.hero-text-3 {
+  font-size: 3rem;
+  font-weight: semibold;
+  font-style: italic;
+  display: inline-block;
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1.5s;
 }
 
-.hero p:last-of-type {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.hero-text-3:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-#heroText {
-  min-height: 2em; /* 保持一致的高度 */
+.hero-title-container {
+  height: 7rem; /* 根据需要调整 */
+  margin-bottom: 3rem; /* 为了保持原有的间距 */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* 其他动画和样式保持不变 */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 /* 自定义样式 */

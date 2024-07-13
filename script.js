@@ -176,6 +176,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   updateYear();
 });
 
+function setupSmoothScroll() {
+  const scrollArrow = document.querySelector(".fa-chevron-down").parentElement;
+  scrollArrow.addEventListener("click", function (e) {
+    e.preventDefault();
+    const worksSection = document.getElementById("works");
+    worksSection.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
 function handleNavScroll() {
   const nav = document.getElementById("mainNav");
 
@@ -190,4 +199,8 @@ function handleNavScroll() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", handleNavScroll);
+document.addEventListener("DOMContentLoaded", function () {
+  // 其他初始化代码...
+  handleNavScroll();
+  setupSmoothScroll();
+});
