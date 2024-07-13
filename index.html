@@ -108,19 +108,13 @@
               href="https://github.com/qcrao"
               target="_blank"
               class="text-gray-400 hover:text-white mr-4">
-              <img
-                src="/api/placeholder/24/24"
-                alt="GitHub"
-                class="inline-block h-6 w-6" />
+              <i class="fab fa-github text-2xl"></i>
             </a>
             <a
               href="https://qcrao.com"
               target="_blank"
               class="text-gray-400 hover:text-white">
-              <img
-                src="/api/placeholder/24/24"
-                alt="Blog"
-                class="inline-block h-6 w-6" />
+              <i class="fas fa-blog fa-lg text-2xl"></i>
             </a>
           </div>
         </div>
@@ -130,9 +124,14 @@
             &copy; <span id="currentYear"></span> QCRAO's Works. All rights
             reserved.
           </p>
-          <div class="copy-email cursor-pointer" onclick="copyEmail()">
-            <span>qcrao91@gmail.com</span>
-            <span class="copy-icon ml-2" id="copyIcon">📋</span>
+          <div
+            class="flex items-center bg-white bg-opacity-10 rounded-lg px-4 py-2">
+            <span class="text-gray-300 mr-2">qcrao91@gmail.com</span>
+            <button
+              onclick="copyToClipboard('qcrao91@gmail.com', this)"
+              class="text-purple-400 hover:text-purple-300 transition duration-300">
+              <i class="fas fa-copy"></i>
+            </button>
           </div>
         </div>
       </div>

@@ -145,23 +145,27 @@ function animateHeroText() {
   });
 }
 
-// 复制邮箱
-function copyEmail() {
-  const email = "qcrao91@gmail.com";
-  navigator.clipboard.writeText(email).then(() => {
-    const copyIcon = document.getElementById("copyIcon");
-    copyIcon.textContent = "✅";
-    setTimeout(() => {
-      copyIcon.textContent = "📋";
-    }, 2000);
-  });
-}
-
 // 更新年份
 function updateYear() {
   const currentYearElement = document.getElementById("currentYear");
   const currentYear = new Date().getFullYear();
   currentYearElement.textContent = currentYear;
+}
+
+function copyToClipboard(text, btnElement) {
+  navigator.clipboard
+    .writeText(text)
+    .then(function () {
+      btnElement.innerHTML = '<i class="fas fa-check"></i>';
+      btnElement.classList.add("text-green-400");
+      setTimeout(function () {
+        btnElement.innerHTML = '<i class="fas fa-copy"></i>';
+        btnElement.classList.remove("text-green-400");
+      }, 2000);
+    })
+    .catch(function (err) {
+      console.error("Unable to copy text to clipboard", err);
+    });
 }
 
 // 页面加载完成后执行
