@@ -37,16 +37,18 @@ function renderWorks(works) {
                           work.creationDate
                         }</span>
                         <div>
-                            ${work.links
-                              .map(
-                                (link) => `
-                                <a href="${link.url}" target="_blank" class="text-blue-500 hover:text-blue-700 mr-2">
-                                    ${link.type}
-                                </a>
-                            `
-                              )
-                              .join("")}
-                        </div>
+                ${work.links
+                  .map(
+                    (link) => `
+                    <a href="${
+                      link.url
+                    }" target="_blank" class="text-gray-600 hover:text-gray-800 mr-2">
+                        <i class="fab fa-${getLinkIcon(link.type)} fa-lg"></i>
+                    </a>
+                `
+                  )
+                  .join("")}
+            </div>
                     </div>
                 </div>
             `;
@@ -56,6 +58,23 @@ function renderWorks(works) {
     typeElement.appendChild(worksGrid);
     worksContainer.appendChild(typeElement);
   });
+}
+
+function getLinkIcon(type) {
+  switch (type.toLowerCase()) {
+    case "github":
+      return "github";
+    case "youtube":
+      return "youtube";
+    case "web":
+      return "microphone-lines";
+    case "bilibili":
+      return "bilibili";
+    case "chrome web store":
+      return "chrome";
+    default:
+      return "microphone-lines";
+  }
 }
 
 // 按类型分组作品
@@ -73,6 +92,7 @@ function groupWorksByType(works) {
 function animateHeroText() {
   const text = "创作使我快乐！";
   const heroText = document.getElementById("heroText");
+  gsap.registerPlugin(TextPlugin);
   gsap.to(heroText, {
     duration: 2,
     text: {

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  padding-top: 64px; /* 根据导航栏高度调整 */
+}
+
 /* 自定义样式 */
 @keyframes float {
   0% {

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QCRAO's Works</title>
+    <link rel="icon" href="https://qcrao.com/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet" />
@@ -11,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body class="bg-gray-100 font-sans">
-    <nav class="bg-white shadow-md fixed w-full z-10">
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
       <div
         class="container mx-auto px-6 py-3 flex justify-between items-center">
         <a href="#" class="flex items-center">
@@ -22,40 +26,35 @@
           <span class="font-bold text-xl text-gray-800">QCRAO's Works</span>
         </a>
         <div class="flex items-center">
-          <div class="dropdown mr-4">
-            <span class="cursor-pointer"
-              >微信联系 <span class="triangle">▼</span></span
-            >
+          <div class="dropdown mr-4 group">
+            <span class="cursor-pointer flex items-center">
+              微信联系/公众号
+              <i
+                class="fas fa-chevron-down ml-1 transition-transform duration-300 group-hover:rotate-180"></i>
+            </span>
             <div class="dropdown-content">
               <img
                 src="/api/placeholder/200/200"
                 alt="微信二维码"
                 class="w-32 h-32" />
-            </div>
-          </div>
-          <div class="dropdown mr-4">
-            <span class="cursor-pointer"
-              >微信公众号 <span class="triangle">▼</span></span
-            >
-            <div class="dropdown-content">
               <img
                 src="/api/placeholder/200/200"
                 alt="公众号二维码"
-                class="w-32 h-32" />
+                class="w-32 h-32 mt-2" />
             </div>
           </div>
           <a
             href="https://github.com/qcrao"
             target="_blank"
-            class="text-gray-600 hover:text-gray-800 mr-4"
-            >GitHub</a
-          >
+            class="text-gray-600 hover:text-gray-800 mr-4">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
           <a
             href="https://qcrao.com"
             target="_blank"
-            class="text-gray-600 hover:text-gray-800"
-            >Blog</a
-          >
+            class="text-gray-600 hover:text-gray-800">
+            <i class="fas fa-blog fa-lg"></i>
+          </a>
         </div>
       </div>
     </nav>
