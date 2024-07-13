@@ -13,7 +13,13 @@ function renderWorks(works) {
   Object.entries(groupedWorks).forEach(([type, items]) => {
     const typeElement = document.createElement("div");
     typeElement.className = "mb-12";
-    typeElement.innerHTML = `<h2 class="text-3xl font-bold mb-6 text-gray-800">${type}</h2>`;
+    typeElement.innerHTML = `
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center cursor-pointer">
+              <i class="fas fa-chevron-down mr-2 transition-transform duration-300"></i>
+              ${type}
+          </h2>
+          <div class="h-1 w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6"></div>
+      `;
 
     const worksGrid = document.createElement("div");
     worksGrid.className =
@@ -22,7 +28,11 @@ function renderWorks(works) {
     items.forEach((work) => {
       const workCard = document.createElement("div");
       workCard.className =
-        "work-card bg-white rounded-lg overflow-hidden shadow-lg";
+        "work-card bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer";
+
+      const primaryLink = getPrimaryLink(work.links);
+      workCard.onclick = () => window.open(primaryLink, "_blank");
+
       workCard.innerHTML = `
                 <img src="${work.coverImageUrl}" alt="${
         work.name
@@ -37,18 +47,20 @@ function renderWorks(works) {
                           work.creationDate
                         }</span>
                         <div>
-                ${work.links
-                  .map(
-                    (link) => `
-                    <a href="${
-                      link.url
-                    }" target="_blank" class="text-gray-600 hover:text-gray-800 mr-2">
-                        <i class="fab fa-${getLinkIcon(link.type)} fa-lg"></i>
-                    </a>
-                `
-                  )
-                  .join("")}
-            </div>
+                            ${getOrderedLinks(work.links)
+                              .map(
+                                (link) => `
+                                <a href="${
+                                  link.url
+                                }" target="_blank" class="text-gray-600 hover:text-gray-800 mr-2" onclick="event.stopPropagation()">
+                                    <i class="${getLinkIcon(
+                                      link.type
+                                    )} fa-lg"></i>
+                                </a>
+                            `
+                              )
+                              .join("")}
+                        </div>
                     </div>
                 </div>
             `;
@@ -57,23 +69,50 @@ function renderWorks(works) {
 
     typeElement.appendChild(worksGrid);
     worksContainer.appendChild(typeElement);
+
+    // 添加折叠功能
+    const header = typeElement.querySelector("h2");
+    const chevron = header.querySelector("i");
+    header.addEventListener("click", () => {
+      worksGrid.classList.toggle("hidden");
+      chevron.style.transform = worksGrid.classList.contains("hidden")
+        ? "rotate(-90deg)"
+        : "";
+    });
   });
+}
+
+function getPrimaryLink(links) {
+  const order = ["web", "github", "chrome web store", "youtube", "bilibili"];
+  for (let type of order) {
+    const link = links.find((l) => l.type.toLowerCase() === type);
+    if (link) return link.url;
+  }
+  return links[0]?.url || "#";
+}
+
+function getOrderedLinks(links) {
+  const order = ["web", "github", "chrome web store", "youtube", "bilibili"];
+  return links.sort(
+    (a, b) =>
+      order.indexOf(a.type.toLowerCase()) - order.indexOf(b.type.toLowerCase())
+  );
 }
 
 function getLinkIcon(type) {
   switch (type.toLowerCase()) {
     case "github":
-      return "github";
+      return "fab fa-github";
     case "youtube":
-      return "youtube";
+      return "fab fa-youtube";
     case "web":
-      return "microphone-lines";
+      return "fas fa-link";
     case "bilibili":
-      return "bilibili";
+      return "fab fa-bilibili";
     case "chrome web store":
-      return "chrome";
+      return "fab fa-chrome";
     default:
-      return "microphone-lines";
+      return "fas fa-link";
   }
 }
 
@@ -127,8 +166,30 @@ function updateYear() {
 
 // 页面加载完成后执行
 document.addEventListener("DOMContentLoaded", async () => {
+  animateHeroText();
   const works = await loadWorks();
   renderWorks(works);
-  animateHeroText();
   updateYear();
 });
+
+function handleNavScroll() {
+  const nav = document.getElementById("mainNav");
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // 向下滚动
+      nav.style.transform = "translateY(-100%)";
+    } else {
+      // 向上滚动
+      nav.style.transform = "translateY(0)";
+      nav.style.backgroundColor =
+        scrollTop > 50 ? "rgba(255, 255, 255, 0.8)" : "transparent";
+    }
+    lastScrollTop = scrollTop;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handleNavScroll);

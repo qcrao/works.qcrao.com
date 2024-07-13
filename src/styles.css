@@ -3,7 +3,39 @@
 @tailwind utilities;
 
 body {
-  padding-top: 64px; /* 根据导航栏高度调整 */
+  padding-top: 80px; /* 增加顶部内边距 */
+}
+
+body {
+  padding-top: 0; /* 移除之前添加的顶部内边距 */
+}
+
+.hero {
+  min-height: calc(100vh - 80px); /* 视口高度减去导航栏高度 */
+  margin-top: 80px; /* 与导航栏高度相同 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  height: 80px; /* 增加导航栏高度 */
+}
+
+.container {
+  max-width: 1280px; /* 增加容器最大宽度 */
+}
+
+.hero {
+  height: 400px; /* 固定高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px; /* 与导航栏高度相同 */
+}
+
+#heroText {
+  min-height: 2em; /* 保持一致的高度 */
 }
 
 /* 自定义样式 */
@@ -37,9 +69,16 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 240px;
+  max-width: max-content; /* 允许根据内容扩展 */
+  min-height: 240px;
+  max-height: max-content; /* 允许根据内容扩展 */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+.dropdown-content img {
+  height: auto; /* 保持宽高比 */
 }
 
 .dropdown:hover .dropdown-content {
