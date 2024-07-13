@@ -27,11 +27,27 @@ nav {
 }
 
 .hero {
-  height: 400px; /* 固定高度 */
+  min-height: 50vh;
+  padding: 4rem 0;
+  padding-top: calc(4rem + 80px); /* 添加导航栏高度的额外顶部内边距 */
+  margin-top: 0; /* 移除顶部外边距 */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px; /* 与导航栏高度相同 */
+}
+
+.hero h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 #heroText {

@@ -70,14 +70,13 @@ function renderWorks(works) {
     typeElement.appendChild(worksGrid);
     worksContainer.appendChild(typeElement);
 
-    // 添加折叠功能
+    // 修复折叠功能
     const header = typeElement.querySelector("h2");
     const chevron = header.querySelector("i");
     header.addEventListener("click", () => {
       worksGrid.classList.toggle("hidden");
-      chevron.style.transform = worksGrid.classList.contains("hidden")
-        ? "rotate(-90deg)"
-        : "";
+      chevron.classList.toggle("fa-chevron-down");
+      chevron.classList.toggle("fa-chevron-right");
     });
   });
 }
