@@ -203,14 +203,14 @@ function setupSmoothScroll() {
         worksSection.getBoundingClientRect().top +
         window.pageYOffset -
         navHeight;
-      smoothScrollTo(targetPosition, 1000);
+      smoothScrollTo(targetPosition);
     } else {
       console.error("Works section not found");
     }
   });
 
   backToTopButton.addEventListener("click", function () {
-    smoothScrollTo(0, 1000);
+    smoothScrollTo(0);
   });
 
   window.addEventListener("scroll", function () {
@@ -224,28 +224,31 @@ function setupSmoothScroll() {
   });
 }
 
-function smoothScrollTo(targetPosition, duration) {
+function smoothScrollTo(targetPosition) {
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  let startTime = null;
+  const duration = 1500;
+  let start = null;
 
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = ease(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    const percentage = Math.min(progress / duration, 1);
+
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(percentage));
+
+    if (progress < duration) {
+      window.requestAnimationFrame(step);
+    }
   }
 
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
   }
 
-  requestAnimationFrame(animation);
+  window.requestAnimationFrame(step);
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   // 其他初始化代码...
   handleNavScroll();
