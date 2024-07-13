@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QCRAO's Works</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <link href="dist/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="#" class="flex items-center">
+          <img
+            src="https://qcrao.com/favicon.ico"
+            alt="QCRAO's Works"
+            class="h-8 w-8 mr-2" />
+          <span class="font-bold text-xl text-gray-800">QCRAO's Works</span>
+        </a>
+        <div class="flex items-center">
+          <div class="dropdown mr-4">
+            <span class="cursor-pointer"
+              >微信联系 <span class="triangle">▼</span></span
+            >
+            <div class="dropdown-content">
+              <img
+                src="/api/placeholder/200/200"
+                alt="微信二维码"
+                class="w-32 h-32" />
+            </div>
+          </div>
+          <div class="dropdown mr-4">
+            <span class="cursor-pointer"
+              >微信公众号 <span class="triangle">▼</span></span
+            >
+            <div class="dropdown-content">
+              <img
+                src="/api/placeholder/200/200"
+                alt="公众号二维码"
+                class="w-32 h-32" />
+            </div>
+          </div>
+          <a
+            href="https://github.com/qcrao"
+            target="_blank"
+            class="text-gray-600 hover:text-gray-800 mr-4"
+            >GitHub</a
+          >
+          <a
+            href="https://qcrao.com"
+            target="_blank"
+            class="text-gray-600 hover:text-gray-800"
+            >Blog</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 mt-16">
+      <div class="container mx-auto px-6 text-center">
+        <h1 id="heroText" class="text-4xl font-bold mb-4"></h1>
+        <p class="text-xl mb-2">
+          我的个人作品小集。以前只会写后端，在 AI 的加持下，前端页面也能写了。
+        </p>
+        <p class="text-xl">何以解忧，唯有创作！</p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <div id="worksContainer" class="grid gap-8"></div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center mb-4">
+          <a href="#" class="flex items-center">
+            <img
+              src="https://qcrao.com/favicon.ico"
+              alt="QCRAO's Works"
+              class="h-8 w-8 mr-2" />
+            <span class="font-bold text-xl">QCRAO's Works</span>
+          </a>
+          <div>
+            <a
+              href="https://github.com/qcrao"
+              target="_blank"
+              class="text-gray-400 hover:text-white mr-4">
+              <img
+                src="/api/placeholder/24/24"
+                alt="GitHub"
+                class="inline-block h-6 w-6" />
+            </a>
+            <a
+              href="https://qcrao.com"
+              target="_blank"
+              class="text-gray-400 hover:text-white">
+              <img
+                src="/api/placeholder/24/24"
+                alt="Blog"
+                class="inline-block h-6 w-6" />
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-4 flex justify-between items-center">
+          <p>
+            &copy; <span id="currentYear"></span> QCRAO's Works. All rights
+            reserved.
+          </p>
+          <div class="copy-email cursor-pointer" onclick="copyEmail()">
+            <span>qcrao91@gmail.com</span>
+            <span class="copy-icon ml-2" id="copyIcon">📋</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

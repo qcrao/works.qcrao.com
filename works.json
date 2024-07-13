@@ -1,0 +1,175 @@
+[
+  {
+    "name": "《Go 语言笔试面试宝典》",
+    "type": "书籍",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2F440Hm7rRDH.png?alt=media&token=a5b94988-c5f1-4821-9e9c-a8a7d5aa50f9",
+    "creationDate": "2022-04",
+    "links": [
+      {
+        "url": "https://github.com/golang-design/go-questions",
+        "type": "Github"
+      },
+      {
+        "url": "https://golang.design/go-questions/",
+        "type": "Web"
+      }
+    ],
+    "description": "编著的人生第 Go 语言相关的书，和长坤合作。"
+  },
+  {
+    "name": "《这一次彻底搞定 TODO 管理》",
+    "type": "专栏",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FW6UeuM_B0u.png?alt=media&token=c2991cc4-313e-42c4-9baa-8781d240d824",
+    "creationDate": "2024-01",
+    "links": [
+      {
+        "url": "https://xiaobot.net/p/MasteringTODOs",
+        "type": "Web"
+      }
+    ],
+    "description": "看了很多 Youtube 上相关的视频，结合自己的工作、生活总结出来的一套可习得的 TODO 管理技巧。可以让你的事物井井有条、心无杂念。"
+  },
+  {
+    "name": "《Go defer 和逃逸分析》",
+    "type": "公开分享",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FW6UeuM_B0u.png?alt=media&token=c2991cc4-313e-42c4-9baa-8781d240d824",
+    "creationDate": "2019-03-07",
+    "links": [
+      {
+        "url": "https://talkgo.org/t/topic/52",
+        "type": "Web"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=-FtBBx44E3g",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1pb411v7m7",
+        "type": "Bilibili"
+      }
+    ],
+    "description": "第一次公开的技术分享，贡献给了 Go 夜读。之后，认识了很多 Go 圈的朋友。"
+  },
+  {
+    "name": "《Go map 源码阅读》",
+    "type": "公开分享",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FA95kMqgZn7.png?alt=media&token=4208663b-1bc3-4c7a-879c-5944aecca3b8",
+    "creationDate": "2019-05-29",
+    "links": [
+      {
+        "url": "https://talkgo.org/t/topic/63",
+        "type": "Web"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=P2v3kvztWU0",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1Q4411W7MR",
+        "type": "Bilibili"
+      }
+    ],
+    "description": "当时在写公众号的文章，顺便来 Go 夜读做分享，刷经验。"
+  },
+  {
+    "name": "《Go Scheduler 源码阅读》",
+    "type": "公开分享",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FE5Q_SxXvQ1.png?alt=media&token=24b0aee3-1b0a-4fb5-898e-3860e1df032e",
+    "creationDate": "2020-03-11",
+    "links": [
+      {
+        "url": "https://talkgo.org/t/topic/97",
+        "type": "Web"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=B-ozWjqnX24",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1SE411L7LU",
+        "type": "Bilibili"
+      }
+    ],
+    "description": "当时受曹大的影响比较大，分享用的是 AsciiDoc。"
+  },
+  {
+    "name": "《如何用 things 3 管理我们的工作和生活？》",
+    "type": "公开分享",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FBsmJUDVi6B.png?alt=media&token=7b789afb-bf83-47c6-8358-bbc83d521381",
+    "creationDate": "2023-03-12",
+    "links": [
+      {
+        "url": "https://talkgo.org/t/topic/4672",
+        "type": "Web"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=fFkOSjBkIQc",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1p24y1g7A6",
+        "type": "Bilibili"
+      }
+    ],
+    "description": "第一次在 Go 夜读做非技术分享，用的 Roam Research 做演示。"
+  },
+  {
+    "name": "《ChatGPT Bulk Delete》",
+    "type": "Google Chrome 插件",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2Fc-xj65d2_c.png?alt=media&token=a339fe36-d159-4f96-80bb-e598b7ae4f64",
+    "creationDate": "2023-04-22",
+    "links": [
+      {
+        "url": "https://chromewebstore.google.com/detail/chatgpt-bulk-delete/effkgioceefcfaegehhfafjneeiabdjg?authuser=0&hl=en",
+        "type": "chrome web store"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=W2Hq6CQ3qv0",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://github.com/qcrao/bulk-delete-chatGPT",
+        "type": "Github"
+      },
+      {
+        "url": "https://chatgpt-bulk-delete.qcrao.com/",
+        "type": "Web"
+      }
+    ],
+    "description": "人生第一个 Web 作品，在 AI 和前端同事的帮助下，折腾了很久。收到了 3 笔国际打赏，最大的一笔是 25 美刀。到如今已经有 7000+ 用户了。"
+  },
+  {
+    "name": "《Xargin Blog Archive》",
+    "type": "Google Chrome 插件",
+    "coverImageUrl": "https://lh3.googleusercontent.com/sYDuaX1a51a1oSnbCM7mar4bpXqJ_17ncJUau0Ua-I3GD-MYugDEWhIwGwyhM1J4MFgc7N0Mnr3PVu0fRaqcisibgDc=s1600-w1600-h1000",
+    "creationDate": "2023-04-30",
+    "links": [
+      {
+        "url": "https://chromewebstore.google.com/detail/xargin-blog-archive/pokfcnejbacnbjbdodlklbafoienomda?authuser=0&hl=en",
+        "type": "chrome web store"
+      },
+      {
+        "url": "https://github.com/qcrao/xargin-blog-archive",
+        "type": "Github"
+      }
+    ],
+    "description": "给曹大博客 xargin.com 定制的目录插件，支持暗黑模式。"
+  },
+  {
+    "name": "《Block Share Card》",
+    "type": "Roam Research 插件",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FBYPKGAHG9T.png?alt=media&token=f83bf7c6-ad3a-42a5-828e-0ae24fe8ddda",
+    "creationDate": "2024-06-13",
+    "links": [
+      {
+        "url": "https://block-share-card.qcrao.com/",
+        "type": "Web"
+      },
+      {
+        "url": "https://github.com/qcrao/block-share-card",
+        "type": "Github"
+      }
+    ],
+    "description": "第一次开发 Roam Research 插件，支持生成卡片分享图片。30 个安装，收入 3 美刀。"
+  }
+]
