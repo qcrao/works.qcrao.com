@@ -28,15 +28,12 @@ function renderWorks(works) {
     items.forEach((work) => {
       const workCard = document.createElement("div");
       workCard.className =
-        "work-card bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer";
-
-      const primaryLink = getPrimaryLink(work.links);
-      workCard.onclick = () => window.open(primaryLink, "_blank");
+        "work-card bg-white rounded-lg overflow-hidden shadow-lg";
 
       workCard.innerHTML = `
                 <img src="${work.coverImageUrl}" alt="${
         work.name
-      }" class="w-full h-48 object-cover">
+      }" class="w-full h-48 object-cover card-cover cursor-pointer">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-gray-800">${
                       work.name
@@ -64,6 +61,14 @@ function renderWorks(works) {
                     </div>
                 </div>
             `;
+      // 添加封面图片点击事件
+      const coverImage = workCard.querySelector(".card-cover");
+      coverImage.addEventListener("click", () => {
+        const primaryLink = getPrimaryLink(work.links);
+        if (primaryLink) {
+          window.open(primaryLink, "_blank");
+        }
+      });
       worksGrid.appendChild(workCard);
     });
 
