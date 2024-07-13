@@ -191,7 +191,7 @@ function handleNavScroll() {
 }
 
 function setupSmoothScroll() {
-  const scrollArrow = document.querySelector(".fa-chevron-down").parentElement;
+  const scrollArrow = document.querySelector(".to-works").parentElement;
   const backToTopButton = document.getElementById("backToTop");
 
   scrollArrow.addEventListener("click", function (e) {
