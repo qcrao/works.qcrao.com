@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 body {
-  padding-top: 80px; /* 增加顶部内边距 */
-}
-
-body {
   padding-top: 0; /* 移除之前添加的顶部内边距 */
 }
 
