@@ -74,9 +74,10 @@ function renderWorks(works) {
     const header = typeElement.querySelector("h2");
     const chevron = header.querySelector("i");
     header.addEventListener("click", () => {
-      worksGrid.classList.toggle("hidden");
-      chevron.classList.toggle("fa-chevron-down");
-      chevron.classList.toggle("fa-chevron-right");
+      worksGrid.style.display =
+        worksGrid.style.display === "none" ? "grid" : "none";
+      chevron.style.transform =
+        worksGrid.style.display === "none" ? "rotate(-90deg)" : "";
     });
   });
 }

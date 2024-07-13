@@ -52,6 +52,20 @@ nav {
   letter-spacing: 1px;
   max-width: 800px;
   margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero p:first-of-type {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero p:last-of-type {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #heroText {
