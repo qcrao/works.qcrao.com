@@ -173,21 +173,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function handleNavScroll() {
   const nav = document.getElementById("mainNav");
-  let lastScrollTop = 0;
 
   window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      // 向下滚动
-      nav.style.transform = "translateY(-100%)";
+    if (window.scrollY > 100) {
+      nav.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+      nav.style.boxShadow = "0 2px 4px rgba(0,0,0,.1)";
     } else {
-      // 向上滚动
-      nav.style.transform = "translateY(0)";
-      nav.style.backgroundColor =
-        scrollTop > 50 ? "rgba(255, 255, 255, 0.8)" : "transparent";
+      nav.style.backgroundColor = "transparent";
+      nav.style.boxShadow = "none";
     }
-    lastScrollTop = scrollTop;
   });
 }
 

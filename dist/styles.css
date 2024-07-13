@@ -824,29 +824,36 @@ nav {
 }
 
 .hero {
-  min-height: 50vh;
-  padding: 4rem 0;
-  padding-top: calc(4rem + 80px);
-  /* 添加导航栏高度的额外顶部内边距 */
+  min-height: 70vh;
+  /* 增加高度 */
+  padding: 6rem 0;
+  /* 增加内边距 */
+  padding-top: calc(6rem + 80px);
+  /* 考虑导航栏高度 */
   margin-top: 0;
-  /* 移除顶部外边距 */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .hero h1 {
   font-family: "Orbitron", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
+  /* 增大字体 */
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
 .hero p {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  /* 增大字体 */
   letter-spacing: 1px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #heroText {
