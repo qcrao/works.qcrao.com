@@ -134,7 +134,7 @@ function groupWorksByType(works) {
 
 // 英雄区文字动画
 function animateHeroText() {
-  const text = "创作使我快乐";
+  const text = "创作，是对世界最美的回应";
   const heroText = document.getElementById("heroText");
   gsap.registerPlugin(TextPlugin);
   gsap.to(heroText, {
