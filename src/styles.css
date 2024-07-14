@@ -16,9 +16,6 @@ nav {
 
 /* Hero 区域样式 */
 .hero {
-  min-height: 80vh;
-  padding: 8rem 0;
-  padding-top: calc(8rem + 80px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +25,6 @@ nav {
 
 .hero-title-container {
   height: 7rem; /* 根据需要调整 */
-  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
