@@ -1171,6 +1171,10 @@ nav {
   display: block;
 }
 
+.dropdown-content.active {
+  display: block;
+}
+
 .triangle {
   display: inline-block;
   width: 0;

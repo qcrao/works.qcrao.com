@@ -290,3 +290,25 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavScroll();
   setupSmoothScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".dropdown-trigger"); // 假设有一个触发元素
+    const content = dropdown.querySelector(".dropdown-content");
+
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      content.classList.toggle("active");
+    });
+
+    // 点击页面其他地方关闭下拉菜单
+    document.addEventListener("click", function (e) {
+      if (!dropdown.contains(e.target)) {
+        content.classList.remove("active");
+      }
+    });
+  });
+});
