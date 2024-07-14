@@ -299,10 +299,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const content = dropdown.querySelector(".dropdown-content");
 
     function toggleDropdown(e) {
+      console.log("==>toggleDropdown");
       e.preventDefault();
       e.stopPropagation();
 
+      console.log("===>1", content.classList, content);
       content.classList.toggle("active");
+      console.log("===>2", content.classList, content);
 
       dropdowns.forEach((otherDropdown) => {
         if (otherDropdown !== dropdown) {
@@ -311,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .classList.remove("active");
         }
       });
+      console.log("===>3", content.classList, content);
     }
 
     trigger.addEventListener("click", toggleDropdown);

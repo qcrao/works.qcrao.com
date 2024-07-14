@@ -1182,7 +1182,7 @@ nav {
 
 /* 小屏幕上的样式调整 */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1420px) {
   .dropdown-content-right {
     left: auto;
     /* 取消左对齐 */
