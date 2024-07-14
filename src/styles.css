@@ -200,12 +200,6 @@ nav {
   display: block;
 }
 
-@media (hover: none) {
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-}
-
 .dropdown-content.active {
   display: block;
 }
