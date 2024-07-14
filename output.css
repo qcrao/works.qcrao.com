@@ -991,7 +991,6 @@ nav {
 .hero-title {
   font-family: "Zhi Mang Xing", cursive;
   font-style: normal;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   letter-spacing: 3px;
   animation: glow 2s ease-in-out infinite alternate;
   margin-top: -3rem;
