@@ -1,3 +1,11 @@
+const workTypeOrder = [
+  "专栏",
+  "书籍",
+  "公开分享",
+  "Google Chrome 插件",
+  "Roam Research 插件",
+];
+
 // 加载作品数据
 async function loadWorks() {
   const response = await fetch("works.json");
@@ -10,11 +18,22 @@ function renderWorks(works) {
   const worksContainer = document.getElementById("worksContainer");
   const groupedWorks = groupWorksByType(works);
 
-  Object.entries(groupedWorks).forEach(([type, items]) => {
+  // 根据 workTypeOrder 排序作品类型，未定义的类型放在最后
+  const sortedTypes = Object.keys(groupedWorks).sort((a, b) => {
+    const indexA = workTypeOrder.indexOf(a);
+    const indexB = workTypeOrder.indexOf(b);
+    if (indexA === -1 && indexB === -1) return 0;
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
+  });
+
+  sortedTypes.forEach((type) => {
+    const items = groupedWorks[type];
     const typeElement = document.createElement("div");
     typeElement.className = "mb-12";
     typeElement.innerHTML = `
-          <h2 class="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-6 text-gray-800 flex items-center cursor-pointer">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center cursor-pointer">
               <i class="fas fa-chevron-down mr-2 transition-transform duration-300"></i>
               ${type}
           </h2>
