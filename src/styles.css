@@ -187,10 +187,13 @@ nav {
   max-height: max-content; /* 允许根据内容扩展 */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  top: 100%; /* 将下拉内容放在触发元素下方 */
+  left: 0; /* 默认左对齐 */
 }
 
 .dropdown-content img {
   height: auto; /* 保持宽高比 */
+  max-width: 100%; /* 确保图片不会超出容器 */
 }
 
 .dropdown:hover .dropdown-content {
@@ -199,6 +202,22 @@ nav {
 
 .dropdown-content.active {
   display: block;
+}
+
+/* 小屏幕上的样式调整 */
+@media screen and (max-width: 768px) {
+  .dropdown-content-right {
+    left: auto; /* 取消左对齐 */
+    right: 0; /* 右对齐 */
+  }
+}
+
+/* 极小屏幕上的额外调整 */
+@media screen and (max-width: 480px) {
+  .dropdown-content-right {
+    max-width: 90vw; /* 限制最大宽度为视口宽度的90% */
+    width: 240px; /* 设置一个固定宽度 */
+  }
 }
 
 .triangle {
