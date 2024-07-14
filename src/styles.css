@@ -37,7 +37,6 @@ nav {
 .hero-title {
   font-family: "Zhi Mang Xing", cursive;
   font-style: normal;
-  font-size: 6rem;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   letter-spacing: 3px;
   animation: glow 2s ease-in-out infinite alternate;
@@ -46,7 +45,6 @@ nav {
 
 .hero-text-1 {
   font-family: "Orbitron", sans-serif;
-  font-size: 2.5rem;
   font-weight: light;
   opacity: 0;
   transform: translateY(20px);
@@ -54,7 +52,6 @@ nav {
 }
 
 .hero-text-2 {
-  font-size: 1.5rem;
   font-weight: normal;
   max-width: 800px;
   margin-left: auto;
@@ -66,7 +63,6 @@ nav {
 
 .hero-text-3 {
   font-family: "ZCOOL KuaiLe", sans-serif;
-  font-size: 3rem;
   font-weight: semibold;
   font-style: italic;
   display: inline-block;
