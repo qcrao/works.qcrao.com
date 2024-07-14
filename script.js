@@ -298,41 +298,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const trigger = dropdown.querySelector(".dropdown-trigger");
     const content = dropdown.querySelector(".dropdown-content");
 
-    trigger.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      // 切换当前下拉菜单的状态
-      content.classList.toggle("active");
-
-      // 关闭其他打开的下拉菜单
-      dropdowns.forEach((otherDropdown) => {
-        if (otherDropdown !== dropdown) {
-          otherDropdown
-            .querySelector(".dropdown-content")
-            .classList.remove("active");
-        }
-      });
-    });
-  });
-
-  // 点击页面其他地方关闭所有下拉菜单
-  document.addEventListener("click", function (e) {
-    dropdowns.forEach((dropdown) => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.querySelector(".dropdown-content").classList.remove("active");
-      }
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdowns = document.querySelectorAll(".dropdown");
-
-  dropdowns.forEach((dropdown) => {
-    const trigger = dropdown.querySelector(".dropdown-trigger");
-    const content = dropdown.querySelector(".dropdown-content");
-
     function toggleDropdown(e) {
       e.preventDefault();
       e.stopPropagation();
