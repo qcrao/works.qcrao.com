@@ -14,7 +14,7 @@ function renderWorks(works) {
     const typeElement = document.createElement("div");
     typeElement.className = "mb-12";
     typeElement.innerHTML = `
-          <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center cursor-pointer">
+          <h2 class="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-6 text-gray-800 flex items-center cursor-pointer">
               <i class="fas fa-chevron-down mr-2 transition-transform duration-300"></i>
               ${type}
           </h2>

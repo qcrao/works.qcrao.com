@@ -1312,6 +1312,10 @@ nav {
     margin-bottom: 7rem;
   }
 
+  .lg\:mt-32 {
+    margin-top: 8rem;
+  }
+
   .lg\:min-h-\[80vh\] {
     min-height: 80vh;
   }
