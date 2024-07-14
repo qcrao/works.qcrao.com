@@ -11,7 +11,7 @@
       },
       {
         "url": "https://golang.design/go-questions/",
-        "type": "Web"
+        "type": "Website"
       }
     ],
     "description": "编著的人生第 Go 语言相关的书，和长坤合作。"
@@ -24,7 +24,7 @@
     "links": [
       {
         "url": "https://xiaobot.net/p/MasteringTODOs",
-        "type": "Web"
+        "type": "Website"
       }
     ],
     "description": "看了很多 Youtube 上相关的视频，结合自己的工作、生活总结出来的一套可习得的 TODO 管理技巧。可以让你的事物井井有条、心无杂念。"
@@ -37,7 +37,7 @@
     "links": [
       {
         "url": "https://talkgo.org/t/topic/52",
-        "type": "Web"
+        "type": "Website"
       },
       {
         "url": "https://www.youtube.com/watch?v=-FtBBx44E3g",
@@ -58,7 +58,7 @@
     "links": [
       {
         "url": "https://talkgo.org/t/topic/63",
-        "type": "Web"
+        "type": "Website"
       },
       {
         "url": "https://www.youtube.com/watch?v=P2v3kvztWU0",
@@ -79,7 +79,7 @@
     "links": [
       {
         "url": "https://talkgo.org/t/topic/97",
-        "type": "Web"
+        "type": "Website"
       },
       {
         "url": "https://www.youtube.com/watch?v=B-ozWjqnX24",
@@ -100,7 +100,7 @@
     "links": [
       {
         "url": "https://talkgo.org/t/topic/4672",
-        "type": "Web"
+        "type": "Website"
       },
       {
         "url": "https://www.youtube.com/watch?v=fFkOSjBkIQc",
@@ -133,7 +133,7 @@
       },
       {
         "url": "https://chatgpt-bulk-delete.qcrao.com/",
-        "type": "Web"
+        "type": "Website"
       }
     ],
     "description": "人生第一个 Web 作品，在 AI 和前端同事的帮助下，折腾了很久。收到了 3 笔国际打赏，最大的一笔是 25 美刀。到如今已经有 7000+ 用户了。"
@@ -163,7 +163,7 @@
     "links": [
       {
         "url": "https://block-share-card.qcrao.com/",
-        "type": "Web"
+        "type": "Website"
       },
       {
         "url": "https://github.com/qcrao/block-share-card",

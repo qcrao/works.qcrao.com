@@ -88,7 +88,13 @@ function renderWorks(works) {
 }
 
 function getPrimaryLink(links) {
-  const order = ["web", "github", "chrome web store", "youtube", "bilibili"];
+  const order = [
+    "website",
+    "github",
+    "chrome web store",
+    "youtube",
+    "bilibili",
+  ];
   for (let type of order) {
     const link = links.find((l) => l.type.toLowerCase() === type);
     if (link) return link.url;
@@ -97,7 +103,13 @@ function getPrimaryLink(links) {
 }
 
 function getOrderedLinks(links) {
-  const order = ["web", "github", "chrome web store", "youtube", "bilibili"];
+  const order = [
+    "website",
+    "github",
+    "chrome web store",
+    "youtube",
+    "bilibili",
+  ];
   return links.sort(
     (a, b) =>
       order.indexOf(a.type.toLowerCase()) - order.indexOf(b.type.toLowerCase())
@@ -110,7 +122,7 @@ function getLinkIcon(type) {
       return "fab fa-github";
     case "youtube":
       return "fab fa-youtube";
-    case "web":
+    case "website":
       return "fas fa-link";
     case "bilibili":
       return "fab fa-bilibili";
