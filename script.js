@@ -169,7 +169,7 @@ function animateHeroText() {
   const heroText = document.getElementById("heroText");
   gsap.registerPlugin(TextPlugin);
   gsap.to(heroText, {
-    duration: 2,
+    duration: 3,
     text: {
       value: text,
       delimiter: "",

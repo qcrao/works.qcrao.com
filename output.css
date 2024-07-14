@@ -992,7 +992,7 @@ nav {
   font-family: "Zhi Mang Xing", cursive;
   font-style: normal;
   letter-spacing: 3px;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: textPulse 2s ease-in-out infinite alternate;
   margin-top: -3rem;
 }
 
@@ -1027,15 +1027,15 @@ nav {
   animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1.5s;
 }
 
-@keyframes glow {
+@keyframes textPulse {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
-      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    opacity: 1;
+    transform: scale(1);
   }
 
   to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
-      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
