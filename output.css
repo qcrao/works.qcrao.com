@@ -600,8 +600,8 @@ video {
   position: relative;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
+.bottom-32 {
+  bottom: 8rem;
 }
 
 .bottom-8 {
@@ -673,8 +673,8 @@ video {
   height: 2rem;
 }
 
-.min-h-\[50vh\] {
-  min-height: 50vh;
+.min-h-\[100vh\] {
+  min-height: 100vh;
 }
 
 .w-8 {
@@ -854,9 +854,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-sm {
@@ -1214,8 +1214,8 @@ nav {
     margin-top: 4rem;
   }
 
-  .sm\:min-h-\[60vh\] {
-    min-height: 60vh;
+  .sm\:min-h-\[100vh\] {
+    min-height: 100vh;
   }
 
   .sm\:px-6 {
