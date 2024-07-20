@@ -171,5 +171,30 @@
       }
     ],
     "description": "第一次开发 Roam Research 插件，支持生成卡片分享图片。30 个安装，收入 3 美刀。"
+  },
+  {
+    "name": "《从 0 到 1 用 Claude.ai 开发个人作品集网站》",
+    "type": "公开分享",
+    "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2F8CvBkVGyZD.jpeg?alt=media&token=4fd65e71-5287-4b5a-b693-559c1537ffc0",
+    "creationDate": "2024-07-20",
+    "links": [
+      {
+        "url": "https://talkgo.org/t/topic/5703",
+        "type": "Website"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1bW42197r8",
+        "type": "Bilibili"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=X4lm4iA-9Ao",
+        "type": "Youtube"
+      },
+      {
+        "url": "https://docs.google.com/presentation/d/19urH6w4kHrL-93z9cds3h87mFTkLxwRcq5afRX_4l-M/edit?pli=1#slide=id.g2ed382f3ff6_1_14",
+        "type": "PPT"
+      }
+    ],
+    "description": "本网站的“创造”过程分享，差点翻车，凭借自己对 tailwindcss 的一点理解，勉强过关。"
   }
 ]

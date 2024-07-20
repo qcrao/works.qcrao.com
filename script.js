@@ -128,6 +128,7 @@ function getOrderedLinks(links) {
     "chrome web store",
     "youtube",
     "bilibili",
+    "ppt",
   ];
   return links.sort(
     (a, b) =>
@@ -147,6 +148,8 @@ function getLinkIcon(type) {
       return "fab fa-bilibili";
     case "chrome web store":
       return "fab fa-chrome";
+    case "ppt":
+      return "fas fa-file-powerpoint";
     default:
       return "fas fa-link";
   }
