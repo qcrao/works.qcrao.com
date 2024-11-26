@@ -170,7 +170,7 @@
         "type": "Github"
       }
     ],
-    "description": "第一次开发 Roam Research 插件，支持生成卡片分享图片。30 个安装，收入 3 美刀。"
+    "description": "第一次开发 Roam Research 插件，支持生成卡片分享图片。"
   },
   {
     "name": "《从 0 到 1 用 Claude.ai 开发个人作品集网站》",
@@ -196,5 +196,18 @@
       }
     ],
     "description": "本网站的“创造”过程分享，差点翻车，凭借自己对 tailwindcss 的一点理解，勉强过关。"
+  },
+  {
+    "name": "《Learn English in RR》",
+    "type": "Roam Research 插件",
+    "coverImageUrl": "https://github.com/qcrao/learn-english-in-RR/raw/main/assets/extract-new-words.gif?raw=true",
+    "creationDate": "2024-11-19",
+    "links": [
+      {
+        "url": "https://github.com/qcrao/learn-english-in-RR",
+        "type": "Github"
+      }
+    ],
+    "description": "在 Roam Research 上学习英语的插件，智能提取新单词。"
   }
 ]
