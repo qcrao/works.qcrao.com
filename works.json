@@ -209,5 +209,18 @@
       }
     ],
     "description": "在 Roam Research 上学习英语的插件，智能提取新单词。"
+  },
+  {
+    "name": "《Last Year Today》",
+    "type": "Roam Research 插件",
+    "coverImageUrl": "https://github.com/qcrao/last-year-today/raw/main/assets/historical-pages.png?raw=true",
+    "creationDate": "2025-01-23",
+    "links": [
+      {
+        "url": "https://github.com/qcrao/last-year-today",
+        "type": "Github"
+      }
+    ],
+    "description": "历史上的今天，找到几年前的页面"
   }
 ]
