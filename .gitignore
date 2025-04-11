@@ -22,3 +22,5 @@ go.work
 go.work.sum
 
 node_modules
+
+.DS_Store
