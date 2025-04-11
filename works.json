@@ -156,6 +156,19 @@
     "description": "给曹大博客 xargin.com 定制的目录插件，支持暗黑模式。"
   },
   {
+    "name": "《My Nav》",
+    "type": "Google Chrome 插件",
+    "coverImageUrl": "https://lh3.googleusercontent.com/WFIq0vTd7EDT7Yc15Uj8lZo9tNfECMEK9cHfnFuPNYKDTFT0jXqw7tFiSZLqeuQMKKEKyqWndIT5iF61LDY0yC3QuQ=s1600-w1600-h1000",
+    "creationDate": "2024-09-29",
+    "links": [
+      {
+        "url": "https://chromewebstore.google.com/detail/my-nav/hagcohiondnnjimialmlneleljfmkflf?authuser=0&hl=en",
+        "type": "chrome web store"
+      }
+    ],
+    "description": "个人的导航网站，基于 markdown。"
+  },
+  {
     "name": "《Block Share Card》",
     "type": "Roam Research 插件",
     "coverImageUrl": "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fqcrao%2FBYPKGAHG9T.png?alt=media&token=f83bf7c6-ad3a-42a5-828e-0ae24fe8ddda",
@@ -209,5 +222,18 @@
       }
     ],
     "description": "在 Roam Research 上学习英语的插件，智能提取新单词。"
+  },
+  {
+    "name": "《Last Year Today》",
+    "type": "Roam Research 插件",
+    "coverImageUrl": "https://github.com/qcrao/last-year-today/raw/main/assets/historical-pages.png?raw=true",
+    "creationDate": "2025-01-23",
+    "links": [
+      {
+        "url": "https://github.com/qcrao/last-year-today",
+        "type": "Github"
+      }
+    ],
+    "description": "历史上的今天，找到几年前的页面。"
   }
 ]
