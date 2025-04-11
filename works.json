@@ -235,5 +235,18 @@
       }
     ],
     "description": "历史上的今天，找到几年前的页面。"
+  },
+  {
+    "name": "《Card Theme》",
+    "type": "Roam Research 插件",
+    "coverImageUrl": "https://github.com/qcrao/card-theme/raw/main/assets/card-theme.png?raw=true",
+    "creationDate": "2025-04-10",
+    "links": [
+      {
+        "url": "https://github.com/qcrao/card-theme",
+        "type": "Github"
+      }
+    ],
+    "description": "Roam Research 卡片主题。"
   }
 ]
